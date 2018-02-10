@@ -11,10 +11,11 @@ class One {
     setName(name1: string): void {
         this.name = name1;
     }
-
+    //getter
     set Name(name: string) {
         this.name = name;
     }
+    //setter
     get Name(): string {
         return this.name;
     }
@@ -26,5 +27,5 @@ O.setName('Hello World');
 console.log(O.getName());//Hello World
 
 console.log(O.Name);
-O.Name='Welcome Boss';
-console.log(O.Name);
+O.Name = 'Welcome Boss';
+console.log(O.Name);//Welcome Boss
