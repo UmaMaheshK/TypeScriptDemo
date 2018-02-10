@@ -1,3 +1,4 @@
+//Using getter and setter
 class One {
     private name: string;
     constructor(name: string) {
