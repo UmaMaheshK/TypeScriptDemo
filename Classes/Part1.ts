@@ -63,5 +63,5 @@ console.log(F.getId());//111
 console.log(F.getName());//Suma Latha
 
 F = new Fifth(100, 'Mahesh');
-console.log(F.getId());//111
-console.log(F.getName());//Suma Latha
+console.log(F.getId());//100
+console.log(F.getName());//Mahesh
