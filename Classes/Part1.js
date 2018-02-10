@@ -64,5 +64,18 @@ var F = new Fifth(111);
 console.log(F.getId()); //111
 console.log(F.getName()); //Suma Latha
 F = new Fifth(100, 'Mahesh');
-console.log(F.getId()); //111
-console.log(F.getName()); //Suma Latha
+console.log(F.getId()); //100
+console.log(F.getName()); //Mahesh
+//Class Expressions
+var Sixth = /** @class */ (function () {
+    function class_1(id, name) {
+        this.id = id;
+        this.name = name;
+    }
+    class_1.prototype.getData = function () {
+        return "id:=" + this.id + "\nname:= " + this.name;
+    };
+    return class_1;
+}());
+var S = new Sixth(100, 'Hi World');
+console.log(S.getData());

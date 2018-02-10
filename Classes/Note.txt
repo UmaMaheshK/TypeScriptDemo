@@ -1,0 +1,7 @@
+To Compile file
+---------------
+tsc file.ts
+
+To Run file
+------------
+tsc file.ts | node file.js

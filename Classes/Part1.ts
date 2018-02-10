@@ -65,3 +65,25 @@ console.log(F.getName());//Suma Latha
 F = new Fifth(100, 'Mahesh');
 console.log(F.getId());//100
 console.log(F.getName());//Mahesh
+
+//Class Expressions without name class
+let Sixth = class {
+    constructor(private id: number, private name: string) { }
+    getData(): string {
+        return `id:=${this.id}\nname:= ${this.name}`;
+    }
+}
+const S = new Sixth(100, 'Hi World');
+console.log(S.getData());
+
+
+//Class Expressions with name class
+let Seventh = class Sixth {
+    constructor(private id: number, private name: string) { }
+    getData(): string {
+        return `id:=${this.id}\nname:= ${this.name}`;
+    }
+}
+var Sev = new Seventh(100, 'Hi World');
+console.log(Sev.getData());
+//console.log(Sev.name);
