@@ -56,4 +56,6 @@ animal.sayName(); //Say from Animal Class
 var dog = new Dog('Hi');
 dog.sayName(); //Say from Dog Class
 var ani = new Dog('Uma Mahesh');
-ani.sayName();
+ani.sayName(); //Say from Dog Class
+var d = ani;
+d.sayName();

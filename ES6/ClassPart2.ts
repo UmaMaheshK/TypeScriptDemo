@@ -35,3 +35,9 @@ dog.sayName();//Say from Dog Class
 
 let ani: Animal = new Dog('Uma Mahesh');
 ani.sayName();//Say from Dog Class
+
+//let d: Dog = <Dog>ani;
+let d: Dog = ani;
+d.sayName();//Say from Dog Class
+
+
