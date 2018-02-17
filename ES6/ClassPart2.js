@@ -57,5 +57,35 @@ var dog = new Dog('Hi');
 dog.sayName(); //Say from Dog Class
 var ani = new Dog('Uma Mahesh');
 ani.sayName(); //Say from Dog Class
+//let d: Dog = <Dog>ani;
 var d = ani;
-d.sayName();
+d.sayName(); //Say from Dog Class
+//Overriding Method
+var BaseClass = /** @class */ (function () {
+    function BaseClass() {
+    }
+    BaseClass.prototype.toString = function () {
+        return 'BaseClass';
+    };
+    BaseClass.classMethod = function () {
+        return 'hello';
+    };
+    return BaseClass;
+}());
+var ParentClass = /** @class */ (function (_super) {
+    __extends(ParentClass, _super);
+    function ParentClass() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    ParentClass.prototype.toString = function () {
+        return _super.prototype.toString.call(this) + ' ParentClass';
+    };
+    ParentClass.classMethod = function () {
+        return _super.classMethod.call(this) + ', too';
+    };
+    return ParentClass;
+}(BaseClass));
+var pc = new ParentClass();
+console.log(pc.toString()); //BaseClass ParentClass
+console.log(ParentClass.classMethod()); //hello, too
+console.log(BaseClass.classMethod()); //hello, too

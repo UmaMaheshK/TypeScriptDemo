@@ -40,4 +40,24 @@ ani.sayName();//Say from Dog Class
 let d: Dog = ani;
 d.sayName();//Say from Dog Class
 
-
+//Overriding Method
+class BaseClass {
+    toString(): string {
+        return 'BaseClass';
+    }
+    static classMethod() {
+        return 'hello';
+    }
+}
+class ParentClass extends BaseClass {
+    toString(): string {
+        return super.toString() + ' ParentClass';
+    }
+    static classMethod() {
+        return super.classMethod() + ', too';        
+    }
+}
+let pc = new ParentClass();
+console.log(pc.toString());//BaseClass ParentClass
+console.log(ParentClass.classMethod());//hello, too
+console.log(BaseClass.classMethod());//hello
