@@ -21,3 +21,8 @@ var DemoClass = /** @class */ (function () {
 }());
 exports.DemoClass = DemoClass;
 exports["default"] = (function () { return 'Uma Mahesh'; });
+exports.counter = 0;
+function inc() {
+    exports.counter++;
+}
+exports.inc = inc;
