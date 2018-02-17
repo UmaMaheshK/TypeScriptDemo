@@ -1,10 +1,10 @@
-//import { squar, doubles } from './NamedExports';//get name exports
+//import { squar, doubles } from './NamedExports';//get named exports
 import * as All from './NamedExports';//Get All from NamedExports file
 import theDefault from './NamedExports';//default export
 import F from './DefaultExport';
-import DD, { squar, doubles } from './NamedExports';//get name exports
+import DD, { squar, doubles } from './NamedExports';//get named exports
 
-import { squar as S, doubles as TT } from './NamedExports';//get name exports
+import { squar as S, doubles as TT } from './NamedExports';//get named exports
 import A from './DefaultExport2';//Multiple default exports
 
 console.log(squar(10));//100
